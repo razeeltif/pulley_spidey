@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: C:\Users\abdoul-jabar.mayaki\Documents\MASTER 2\_PROJETS\PulleySpidey_AUDIO\PullSpi\PullSpi.fspro
-  SourceProjectPathUnformatted: C:\Users\abdoul-jabar.mayaki\Documents\MASTER 2\_PROJETS\PulleySpidey_AUDIO\PullSpi\PullSpi.fspro
-  SourceBankPathUnformatted: C:\Users\abdoul-jabar.mayaki\Documents\MASTER 2\_PROJETS\PulleySpidey_AUDIO\PullSpi\Build
+  sourceProjectPath: E:\Unity\Projets\PulleySpideyy\PullyeSpideySOund\PulleySpidey_AUDIO\PullSpi\PullSpi.fspro
+  SourceProjectPathUnformatted: E:\Unity\Projets\PulleySpideyy\PullyeSpideySOund\PulleySpidey_AUDIO\PullSpi\PullSpi.fspro
+  SourceBankPathUnformatted: E:\Unity\Projets\PulleySpideyy\PullyeSpideySOund\PulleySpidey_AUDIO\PullSpi\Build
   AutomaticEventLoading: 1
   AutomaticSampleLoading: 0
   ImportType: 0
