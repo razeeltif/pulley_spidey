@@ -9,7 +9,7 @@ public class CableComponent : MonoBehaviour
 
 #pragma warning disable 0649 
     public Transform cableEnd;
-    [SerializeField] private Material cableMaterial;
+    [SerializeField] public Material cableMaterial;
 #pragma warning restore 0649
 
     // Cable config
@@ -17,13 +17,13 @@ public class CableComponent : MonoBehaviour
     [HideInInspector] public Vector3 cableEndOffset;
     public float cableLength = 0.5f;
     public int totalSegments = 50;
-    [SerializeField] private float segmentsPerUnit = 2f;
+    [SerializeField] public float segmentsPerUnit = 2f;
     private int segments = 0;
     [HideInInspector] public float cableWidth = 0.1f;
 
     // Solver config
     [HideInInspector] public int verletIterations = 1;
-    [SerializeField] private int solverIterations = 1;
+    [SerializeField] public int solverIterations = 1;
 
     //[Range(0,3)]
     //[SerializeField] private float stiffness = 1f;
