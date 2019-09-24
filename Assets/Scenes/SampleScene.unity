@@ -163,7 +163,6 @@ GameObject:
   - component: {fileID: 152695588}
   - component: {fileID: 152695591}
   - component: {fileID: 152695592}
-  - component: {fileID: 152695593}
   m_Layer: 0
   m_Name: patte4
   m_TagString: Untagged
@@ -289,26 +288,6 @@ MonoBehaviour:
   cableWidth: 0.1
   verletIterations: 1
   solverIterations: 1
---- !u!231 &152695593
-SpringJoint2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 152695586}
-  m_Enabled: 1
-  serializedVersion: 4
-  m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 203899753}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 0
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0, y: 0}
-  m_AutoConfigureDistance: 0
-  m_Distance: 2
-  m_DampingRatio: 0.5
-  m_Frequency: 1
 --- !u!1 &203899747
 GameObject:
   m_ObjectHideFlags: 0
@@ -322,7 +301,6 @@ GameObject:
   - component: {fileID: 203899750}
   - component: {fileID: 203899749}
   - component: {fileID: 203899753}
-  - component: {fileID: 203899752}
   - component: {fileID: 203899754}
   m_Layer: 0
   m_Name: patte3
@@ -406,26 +384,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 203899747}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!231 &203899752
-SpringJoint2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 203899747}
-  m_Enabled: 1
-  serializedVersion: 4
-  m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 580379915}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 0
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0, y: 0}
-  m_AutoConfigureDistance: 0
-  m_Distance: 2
-  m_DampingRatio: 0.5
-  m_Frequency: 1
 --- !u!50 &203899753
 Rigidbody2D:
   serializedVersion: 4
@@ -513,7 +471,7 @@ DistanceJoint2D:
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 0
   m_Distance: 1.5
-  m_MaxDistanceOnly: 0
+  m_MaxDistanceOnly: 1
 --- !u!232 &332925839
 DistanceJoint2D:
   m_ObjectHideFlags: 0
@@ -532,7 +490,7 @@ DistanceJoint2D:
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 0
   m_Distance: 1.5
-  m_MaxDistanceOnly: 0
+  m_MaxDistanceOnly: 1
 --- !u!50 &332925840
 Rigidbody2D:
   serializedVersion: 4
@@ -649,7 +607,7 @@ DistanceJoint2D:
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 0
   m_Distance: 1.5
-  m_MaxDistanceOnly: 0
+  m_MaxDistanceOnly: 1
 --- !u!232 &332925846
 DistanceJoint2D:
   m_ObjectHideFlags: 0
@@ -668,7 +626,7 @@ DistanceJoint2D:
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 0
   m_Distance: 1.5
-  m_MaxDistanceOnly: 0
+  m_MaxDistanceOnly: 1
 --- !u!232 &332925847
 DistanceJoint2D:
   m_ObjectHideFlags: 0
@@ -687,7 +645,7 @@ DistanceJoint2D:
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 0
   m_Distance: 1.5
-  m_MaxDistanceOnly: 0
+  m_MaxDistanceOnly: 1
 --- !u!232 &332925848
 DistanceJoint2D:
   m_ObjectHideFlags: 0
@@ -706,7 +664,7 @@ DistanceJoint2D:
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 0
   m_Distance: 1.5
-  m_MaxDistanceOnly: 0
+  m_MaxDistanceOnly: 1
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -808,9 +766,6 @@ GameObject:
   - component: {fileID: 580379911}
   - component: {fileID: 580379915}
   - component: {fileID: 580379916}
-  - component: {fileID: 580379914}
-  - component: {fileID: 580379918}
-  - component: {fileID: 580379917}
   m_Layer: 0
   m_Name: patte1
   m_TagString: Untagged
@@ -893,26 +848,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 580379909}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!231 &580379914
-SpringJoint2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 580379909}
-  m_Enabled: 1
-  serializedVersion: 4
-  m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 2123975537}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 0
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0, y: 0}
-  m_AutoConfigureDistance: 0
-  m_Distance: 2
-  m_DampingRatio: 0.5
-  m_Frequency: 1
 --- !u!50 &580379915
 Rigidbody2D:
   serializedVersion: 4
@@ -956,46 +891,6 @@ MonoBehaviour:
   cableWidth: 0.1
   verletIterations: 1
   solverIterations: 1
---- !u!231 &580379917
-SpringJoint2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 580379909}
-  m_Enabled: 1
-  serializedVersion: 4
-  m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 152695591}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 0
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0, y: 0}
-  m_AutoConfigureDistance: 0
-  m_Distance: 2
-  m_DampingRatio: 0.5
-  m_Frequency: 1
---- !u!231 &580379918
-SpringJoint2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 580379909}
-  m_Enabled: 1
-  serializedVersion: 4
-  m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 203899753}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 0
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0, y: 0}
-  m_AutoConfigureDistance: 0
-  m_Distance: 2
-  m_DampingRatio: 0.5
-  m_Frequency: 1
 --- !u!1 &1344376142
 GameObject:
   m_ObjectHideFlags: 0
@@ -1250,7 +1145,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1746936451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1265,6 +1160,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patteAraigneePrefab: {fileID: 1805683701076590499, guid: 9477145ecc0947f4f9d0c560df83c7ed,
     type: 3}
+  patteInstances:
+  - {fileID: 580379909}
+  - {fileID: 2123975532}
+  - {fileID: 203899747}
+  - {fileID: 152695586}
+  - {fileID: 1923945587}
+  - {fileID: 1866532118}
   nombreDePattes: 4
   CorpDeLaraignee: {fileID: 332925837}
   CableMaterial: {fileID: 2100000, guid: b88840217feb7ea44a4a1d560de77857, type: 2}
@@ -1273,9 +1175,9 @@ MonoBehaviour:
   TotalSegments: 3
   SegmentsPerUnit: 1
   SolverIterations: 1
-  distance: 0
-  dampingRatio: 0
-  frequency: 0
+  distance: 2
+  dampingRatio: 0.5
+  frequency: 1
 --- !u!4 &1746936452
 Transform:
   m_ObjectHideFlags: 0
@@ -1303,7 +1205,6 @@ GameObject:
   - component: {fileID: 1866532124}
   - component: {fileID: 1866532123}
   - component: {fileID: 1866532122}
-  - component: {fileID: 1866532121}
   - component: {fileID: 1866532120}
   m_Layer: 0
   m_Name: patte6
@@ -1348,26 +1249,6 @@ MonoBehaviour:
   cableWidth: 0.1
   verletIterations: 1
   solverIterations: 1
---- !u!231 &1866532121
-SpringJoint2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1866532118}
-  m_Enabled: 1
-  serializedVersion: 4
-  m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 2123975537}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 0
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0, y: 0}
-  m_AutoConfigureDistance: 0
-  m_Distance: 2
-  m_DampingRatio: 0.5
-  m_Frequency: 1
 --- !u!50 &1866532122
 Rigidbody2D:
   serializedVersion: 4
@@ -1463,7 +1344,6 @@ GameObject:
   - component: {fileID: 1923945593}
   - component: {fileID: 1923945592}
   - component: {fileID: 1923945591}
-  - component: {fileID: 1923945590}
   - component: {fileID: 1923945589}
   m_Layer: 0
   m_Name: patte5
@@ -1508,26 +1388,6 @@ MonoBehaviour:
   cableWidth: 0.1
   verletIterations: 1
   solverIterations: 1
---- !u!231 &1923945590
-SpringJoint2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1923945587}
-  m_Enabled: 1
-  serializedVersion: 4
-  m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 1866532122}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 0
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0, y: 0}
-  m_AutoConfigureDistance: 0
-  m_Distance: 2
-  m_DampingRatio: 0.5
-  m_Frequency: 1
 --- !u!50 &1923945591
 Rigidbody2D:
   serializedVersion: 4
@@ -1623,7 +1483,6 @@ GameObject:
   - component: {fileID: 2123975535}
   - component: {fileID: 2123975534}
   - component: {fileID: 2123975537}
-  - component: {fileID: 2123975538}
   - component: {fileID: 2123975539}
   m_Layer: 0
   m_Name: patte2
@@ -1728,26 +1587,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!231 &2123975538
-SpringJoint2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2123975532}
-  m_Enabled: 1
-  serializedVersion: 4
-  m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 152695591}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 0
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0, y: 0}
-  m_AutoConfigureDistance: 0
-  m_Distance: 2
-  m_DampingRatio: 0.5
-  m_Frequency: 1
 --- !u!114 &2123975539
 MonoBehaviour:
   m_ObjectHideFlags: 0
