@@ -5,47 +5,101 @@ using UnityEngine;
 public class MoucheLogic : MonoBehaviour
 {
 
-    public float vitesse = 0.5f;
-    public float vitesseOndulation = 10; 
+    private float vitesseDeVol = 0.5f;
+    public float vitesseDeVolApresLeFil = 2f;
+    public float frequenceOndulation = 10; 
     public float forceOndulation = 10;
     public enum DIRECTION { gauche, droite, sinG, sinD};
     public DIRECTION direction = DIRECTION.sinD;
+    public float tempsSurLeFil = 2f;
 
 
-    private float timePasted = 0;
+    private float timePassed = 0;
+    private bool filPasse = false;
+    private bool accrocheAuFil = false;
+
+    private UTimer timerOnFil;
 
     // Start is called before the first frame update
     void Start()
     {
+        timerOnFil = UTimer.Initialize(tempsSurLeFil, this, decrochageDuFil);
+
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        timePasted += Time.deltaTime;
 
-        switch (direction)
+        float vitesse;
+
+        timePassed += Time.deltaTime;
+
+        if (filPasse)
         {
-            case DIRECTION.gauche:
-
-                transform.Translate(new Vector3(-Time.deltaTime * vitesse, 0, 0));
-                break;
-
-            case DIRECTION.droite:
-                transform.Translate(new Vector3(Time.deltaTime * vitesse, 0, 0));
-                break;
-
-            case DIRECTION.sinG:
-                transform.Translate(new Vector3(-Time.deltaTime * vitesse, Mathf.Sin(timePasted * vitesseOndulation) * forceOndulation, 0));
-                break;
-
-            case DIRECTION.sinD:
-                transform.Translate(new Vector3(Time.deltaTime * vitesse, Mathf.Sin(timePasted * vitesseOndulation) * forceOndulation, 0));
-                break;
-
-            
+            vitesse = vitesseDeVolApresLeFil;
+        }
+        else
+        {
+            vitesse = vitesseDeVol;
         }
 
+
+        if (accrocheAuFil)
+        {
+
+        }
+        else
+        {
+            switch (direction)
+            {
+                case DIRECTION.gauche:
+
+                    transform.Translate(new Vector3(-Time.deltaTime * vitesse, 0, 0));
+                    break;
+
+                case DIRECTION.droite:
+                    transform.Translate(new Vector3(Time.deltaTime * vitesse, 0, 0));
+                    break;
+
+                case DIRECTION.sinG:
+                    transform.Translate(new Vector3(-Time.deltaTime * vitesse, Mathf.Sin(timePassed * frequenceOndulation) * forceOndulation, 0));
+                    break;
+
+                case DIRECTION.sinD:
+                    transform.Translate(new Vector3(Time.deltaTime * vitesse, Mathf.Sin(timePassed * frequenceOndulation) * forceOndulation, 0));
+                    break;
+
+            }
+        }
+
+        if(direction == DIRECTION.gauche || direction == DIRECTION.sinG)
+        {
+            if (transform.position.x < 0 && !filPasse && !accrocheAuFil)
+            {
+                accrocheAuFil = true;
+                timerOnFil.start(tempsSurLeFil);
+            }
+        }
+        else
+        {
+            if (transform.position.x > 0 && !filPasse && !accrocheAuFil)
+            {
+                accrocheAuFil = true;
+                timerOnFil.start(tempsSurLeFil);
+            }
+        }
+
+
+
     }
+
+
+    private void decrochageDuFil()
+    {
+        accrocheAuFil = false;
+        filPasse = true;
+    }
+
 }

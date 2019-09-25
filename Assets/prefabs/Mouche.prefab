@@ -107,7 +107,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b6fe5d2d06bcf940b9d59d6b07ee7ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vitesse: 5
-  vitesseOndulation: 10
+  vitesseDeVolApresLeFil: 4
+  frequenceOndulation: 10
   forceOndulation: 0.05
   direction: 3
+  tempsSurLeFil: 2

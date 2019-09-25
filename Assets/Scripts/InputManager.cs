@@ -17,6 +17,11 @@ public class InputManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        araigneeCorps.transform.Translate(new Vector3(0, Input.mouseScrollDelta.y * vitesseAraignee, 0));
+
+        float nextYPos = araigneeCorps.transform.position.y + Input.mouseScrollDelta.y * vitesseAraignee;
+        if (nextYPos < GameManager.instance.Range.y / 2 && nextYPos > -GameManager.instance.Range.y / 2)
+        {
+            araigneeCorps.transform.Translate(new Vector3(0, Input.mouseScrollDelta.y * vitesseAraignee, 0));
+        }
     }
 }
