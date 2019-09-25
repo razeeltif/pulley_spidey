@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-
-
     static public GameManager instance;
+
+    private ArduinoSerialInfos _arduinoSerialInfos;
+    public ArduinoSerialInfos ArduinoSerialInfos => _arduinoSerialInfos;
+
     public GameObject mouchePrefab;
     // la mouche spwanera dans une fourchette de valeurs comprisent entre -screenWidth + OffsetInitial et screenWidth - offsetInitial
     public float OffsetInitial = 1;

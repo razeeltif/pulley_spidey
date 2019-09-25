@@ -7,10 +7,11 @@ using System.IO.Ports;
 using UnityEngine.Networking;
 
 public class ArduinoSerialInfos : MonoBehaviour {
-    
+
     /* The serial port where the Arduino is connected. */
     [Tooltip("The serial port where the Arduino is connected")]
     public string port = "COM6";
+
     /* The baudrate of the serial port. */
     [Tooltip("The baudrate of the serial port")]
     public int baudrate = 9600;
@@ -29,8 +30,7 @@ public class ArduinoSerialInfos : MonoBehaviour {
 //        SerialDataReceivedEventHandler(DataReceivedHandler);
     }
 
-    void Update()
-    {
+    void Update() {
         if (stream.IsOpen) {
             try {
                 ReceivedInfo(stream.ReadByte());
@@ -47,15 +47,13 @@ public class ArduinoSerialInfos : MonoBehaviour {
         if (rotation == 1) {
             clockwise = true;
             speedRotation = 1f;
-        }else if (rotation == -1) {
+        }
+        else if (rotation == -1) {
             clockwise = false;
             speedRotation = 1f;
         }
         else {
             speedRotation = 0f;
         }
-
     }
-    
-    
 }
