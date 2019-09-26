@@ -6,8 +6,11 @@ public class GameManager : MonoBehaviour
 {
     static public GameManager instance;
 
-    private ArduinoSerialInfos _arduinoSerialInfos;
-    public ArduinoSerialInfos ArduinoSerialInfos => _arduinoSerialInfos;
+    [SerializeField] private ArduinoSerialInfos _arduinoSerialInfos;
+    public ArduinoSerialInfos ArduinoSerialInfos {
+        get { return _arduinoSerialInfos; }
+        set { _arduinoSerialInfos = value; }
+    }
 
     public GameObject mouchePrefab;
     public GameObject mouchePredicatPrefab;
@@ -25,7 +28,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -39,9 +41,6 @@ public class GameManager : MonoBehaviour
     {
         
     }
-
-
-
 
     public void moucheDestroyed()
     {

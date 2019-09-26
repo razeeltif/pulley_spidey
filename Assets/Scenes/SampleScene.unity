@@ -1102,6 +1102,7 @@ GameObject:
   - component: {fileID: 1746936451}
   - component: {fileID: 1746936453}
   - component: {fileID: 1746936454}
+  - component: {fileID: 1746936455}
   m_Layer: 0
   m_Name: Scripts
   m_TagString: Untagged
@@ -1181,11 +1182,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9eb575a3495af86429de7410c13b72a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _arduinoSerialInfos: {fileID: 1746936455}
   mouchePrefab: {fileID: 8183598718556186658, guid: 25f1ad2bea1eb25429d1f95d16b57f7e,
     type: 3}
   mouchePredicatPrefab: {fileID: 4444182561428024875, guid: 2080df5a7a344c74aa29c27144487eee,
     type: 3}
   OffsetInitial: 0.2
+--- !u!114 &1746936455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1746936450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12dd1ea927831af42a6d3cad3c13c8d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  port: COM8
+  baudrate: 9600
 --- !u!1 &1866532118
 GameObject:
   m_ObjectHideFlags: 0

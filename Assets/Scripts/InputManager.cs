@@ -17,7 +17,6 @@ public class InputManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         float nextYPos = araigneeCorps.transform.position.y + Input.mouseScrollDelta.y * vitesseAraignee;
         if (nextYPos < GameManager.instance.Range.y / 2 && nextYPos > -GameManager.instance.Range.y / 2)
         {
