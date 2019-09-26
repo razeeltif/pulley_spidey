@@ -1188,6 +1188,10 @@ MonoBehaviour:
   mouchePredicatPrefab: {fileID: 4444182561428024875, guid: 2080df5a7a344c74aa29c27144487eee,
     type: 3}
   OffsetInitial: 0.2
+  AjoutOffsetQuandMoucheManquee: 0.5
+  AjoutOffsetQuandMoucheMangee: -0.5
+  OffsetMin: 0.2
+  OffsetMax: 4.5
 --- !u!114 &1746936455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1355,11 +1359,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mouche
       objectReference: {fileID: 0}
-    - target: {fileID: 8183598718556186658, guid: 25f1ad2bea1eb25429d1f95d16b57f7e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8183598718556186686, guid: 25f1ad2bea1eb25429d1f95d16b57f7e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1414,11 +1413,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8183598718556186685, guid: 25f1ad2bea1eb25429d1f95d16b57f7e,
-        type: 3}
-      propertyPath: amplitudeAnimDebat
-      value: 0.01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 25f1ad2bea1eb25429d1f95d16b57f7e, type: 3}

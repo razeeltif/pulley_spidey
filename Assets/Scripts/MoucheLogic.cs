@@ -5,7 +5,7 @@ using UnityEngine;
 public class MoucheLogic : MonoBehaviour
 {
 
-    private float vitesseDeVol = 0.5f;
+    public float vitesseDeVol = 0.5f;
     public float vitesseDeVolApresLeFil = 2f;
     public float frequenceOndulation = 10; 
     public float forceOndulation = 10;
