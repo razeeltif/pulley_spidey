@@ -177,8 +177,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 152695586}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.7600002, y: -1.01, z: 0}
-  m_LocalScale: {x: 0.28166, y: 0.28166, z: 0.28166}
+  m_LocalPosition: {x: 1.8361, y: -1.0846, z: 0}
+  m_LocalScale: {x: 0.59894997, y: 0.59894997, z: 0.59894997}
   m_Children: []
   m_Father: {fileID: 34081938}
   m_RootOrder: 4
@@ -281,7 +281,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cableEnd: {fileID: 332925844}
-  cableMaterial: {fileID: 2100000, guid: b88840217feb7ea44a4a1d560de77857, type: 2}
+  cableMaterial: {fileID: 2100000, guid: 0d8dee86edc86d344b1aa3f3e0672973, type: 2}
   cableStartOffset: {x: 0, y: 0, z: 0}
   cableEndOffset: {x: 0, y: 0, z: 0}
   cableLength: 1
@@ -318,8 +318,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 203899747}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.76, y: 0.049999952, z: 0}
-  m_LocalScale: {x: 0.28166, y: 0.28166, z: 0.28166}
+  m_LocalPosition: {x: 1.8397, y: -0.0281, z: 0}
+  m_LocalScale: {x: 0.61390615, y: 0.61390615, z: 0.61390615}
   m_Children: []
   m_Father: {fileID: 34081938}
   m_RootOrder: 3
@@ -422,7 +422,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cableEnd: {fileID: 332925844}
-  cableMaterial: {fileID: 2100000, guid: b88840217feb7ea44a4a1d560de77857, type: 2}
+  cableMaterial: {fileID: 2100000, guid: 0d8dee86edc86d344b1aa3f3e0672973, type: 2}
   cableStartOffset: {x: 0, y: 0, z: 0}
   cableEndOffset: {x: 0, y: 0, z: 0}
   cableLength: 1
@@ -870,8 +870,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 580379909}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.81, y: -0.02, z: 0}
-  m_LocalScale: {x: 0.28166, y: 0.28166, z: 0.28166}
+  m_LocalPosition: {x: -1.7341, y: -0.0944, z: 0}
+  m_LocalScale: {x: 0.598105, y: 0.598105, z: 0.598105}
   m_Children: []
   m_Father: {fileID: 34081938}
   m_RootOrder: 1
@@ -974,7 +974,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cableEnd: {fileID: 332925844}
-  cableMaterial: {fileID: 2100000, guid: b88840217feb7ea44a4a1d560de77857, type: 2}
+  cableMaterial: {fileID: 2100000, guid: 0d8dee86edc86d344b1aa3f3e0672973, type: 2}
   cableStartOffset: {x: 0, y: 0, z: 0}
   cableEndOffset: {x: 0, y: 0, z: 0}
   cableLength: 1
@@ -1234,8 +1234,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1866532118}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.81, y: 1.3800001, z: 0}
-  m_LocalScale: {x: 0.28166, y: 0.28166, z: 0.28166}
+  m_LocalPosition: {x: -1.7461, y: 1.3174, z: 0}
+  m_LocalScale: {x: 0.5479413, y: 0.5479413, z: 0.5479413}
   m_Children: []
   m_Father: {fileID: 34081938}
   m_RootOrder: 6
@@ -1253,7 +1253,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cableEnd: {fileID: 332925844}
-  cableMaterial: {fileID: 2100000, guid: b88840217feb7ea44a4a1d560de77857, type: 2}
+  cableMaterial: {fileID: 2100000, guid: 0d8dee86edc86d344b1aa3f3e0672973, type: 2}
   cableStartOffset: {x: 0, y: 0, z: 0}
   cableEndOffset: {x: 0, y: 0, z: 0}
   cableLength: 1
@@ -1444,8 +1444,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1923945587}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.76, y: 1.4100001, z: 0}
-  m_LocalScale: {x: 0.28166, y: 0.28166, z: 0.28166}
+  m_LocalPosition: {x: 1.8583, y: 1.3137, z: 0}
+  m_LocalScale: {x: 0.69124997, y: 0.69124997, z: 0.69124997}
   m_Children: []
   m_Father: {fileID: 34081938}
   m_RootOrder: 5
@@ -1463,7 +1463,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cableEnd: {fileID: 332925844}
-  cableMaterial: {fileID: 2100000, guid: b88840217feb7ea44a4a1d560de77857, type: 2}
+  cableMaterial: {fileID: 2100000, guid: 0d8dee86edc86d344b1aa3f3e0672973, type: 2}
   cableStartOffset: {x: 0, y: 0, z: 0}
   cableEndOffset: {x: 0, y: 0, z: 0}
   cableLength: 1
@@ -1585,8 +1585,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2123975532}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.81, y: -1.04, z: 0}
-  m_LocalScale: {x: 0.28166, y: 0.28166, z: 0.28166}
+  m_LocalPosition: {x: -1.7466, y: -1.1021, z: 0}
+  m_LocalScale: {x: 0.5459416, y: 0.5459416, z: 0.5459416}
   m_Children: []
   m_Father: {fileID: 34081938}
   m_RootOrder: 2
@@ -1689,7 +1689,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cableEnd: {fileID: 332925844}
-  cableMaterial: {fileID: 2100000, guid: b88840217feb7ea44a4a1d560de77857, type: 2}
+  cableMaterial: {fileID: 2100000, guid: 0d8dee86edc86d344b1aa3f3e0672973, type: 2}
   cableStartOffset: {x: 0, y: 0, z: 0}
   cableEndOffset: {x: 0, y: 0, z: 0}
   cableLength: 1
