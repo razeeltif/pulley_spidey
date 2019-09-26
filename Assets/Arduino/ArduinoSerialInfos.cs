@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.IO;
 using UnityEngine;
 using System.IO.Ports;
 using Debug = UnityEngine.Debug;
@@ -30,10 +31,16 @@ public class ArduinoSerialInfos : MonoBehaviour {
     }
     
     private void Start() {
-        stream = new SerialPort(port, baudrate);
-        stream.ReadTimeout = 1;
-        stream.Open();
+        try {
+            stream = new SerialPort(port, baudrate);
+            stream.ReadTimeout = 1;
+            stream.Open();
 //        this.stream.DataReceived += new SerialDataReceivedEventHandler(DataReceivedHandler);
+        }
+        catch (IOException e) {
+            Console.WriteLine(e);
+            throw;
+        }
     }
 
     void Update() {
@@ -62,6 +69,8 @@ public class ArduinoSerialInfos : MonoBehaviour {
     }
 
     void ReceivedInfo(int rotation) {
+        
+        
         if (rotation == 1) {
             clockwise = true;
             speedRotation = 1f;
@@ -69,7 +78,7 @@ public class ArduinoSerialInfos : MonoBehaviour {
         }
         else if (rotation == -1) {
             clockwise = false;
-            speedRotation = 1f;
+            speedRotation = -1f;
             Debug.Log("Clockwise = " + clockwise + " // SpeedRotation = " + speedRotation);
         }
         else {

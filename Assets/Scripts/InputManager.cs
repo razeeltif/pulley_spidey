@@ -8,6 +8,8 @@ public class InputManager : MonoBehaviour
     public GameObject araigneeCorps;
     public float vitesseAraignee = 1;
 
+    public float coeffSpeedInfo = 1f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +22,8 @@ public class InputManager : MonoBehaviour
         float nextYPos = araigneeCorps.transform.position.y + Input.mouseScrollDelta.y * vitesseAraignee;
         if (nextYPos < GameManager.instance.Range.y / 2 && nextYPos > -GameManager.instance.Range.y / 2)
         {
-            araigneeCorps.transform.Translate(new Vector3(0, Input.mouseScrollDelta.y * vitesseAraignee, 0));
+            araigneeCorps.transform.Translate(new Vector3(0, Input.mouseScrollDelta.y * vitesseAraignee 
+                             + GameManager.instance.ArduinoSerialInfos.SpeedRotation * coeffSpeedInfo , 0));
         }
     }
 }
