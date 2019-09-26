@@ -46,6 +46,25 @@ MonoBehaviour:
   - Name: Desktop
     Value: 760
   Exists: 1
+--- !u!114 &114037968708566240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: E:\Unity\Projets\PulleySpideyy\PulleySpidey\FMOD_Assets\Desktop\main.bank
+  lastModified: 637049336000383048
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 1007648
+  Exists: 1
 --- !u!114 &114046627867713898
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -275,6 +294,25 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 74538
+--- !u!114 &114502257575140382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: E:\Unity\Projets\PulleySpideyy\PulleySpidey\FMOD_Assets\Desktop\Master Bank.bank
+  lastModified: 637050051173626245
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 1074624
+  Exists: 1
 --- !u!114 &114569081584300976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -397,6 +435,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 74538
+--- !u!114 &114940648414297380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Test
+  guid: e1fade282e24d34a980649da6f0da9ca
+  Banks:
+  - {fileID: 0}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 74538
 --- !u!114 &114962393973319492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -435,4 +496,23 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 12474
+  Exists: 1
+--- !u!114 &114986304903696516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: FMOD_Assets\Desktop\Master Bank.strings.bank
+  lastModified: 637049336000272907
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 760
   Exists: 1

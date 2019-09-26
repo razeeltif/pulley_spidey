@@ -7,6 +7,7 @@ public class AraigneeLogic : MonoBehaviour
 
     public float growSpeed = 0.01f;
     public float blinkFrequency = 2f;
+    public GameObject gameObjectToGrow;
 
     private Animator anim;
     private UTimer timerBlink;
@@ -37,12 +38,13 @@ public class AraigneeLogic : MonoBehaviour
 
     public void grow()
     {
-        transform.parent.transform.localScale += new Vector3(growSpeed, growSpeed, 0);
+        //transform.parent.transform.localScale += new Vector3(growSpeed, growSpeed, 0);
+        gameObjectToGrow.transform.localScale += new Vector3(growSpeed, growSpeed, 0);
         DistanceJoint2D[] tableauDistance = GetComponents<DistanceJoint2D>();
-        foreach(DistanceJoint2D distanceJoint in tableauDistance)
+        /*foreach(DistanceJoint2D distanceJoint in tableauDistance)
         {
             distanceJoint.distance += growSpeed;
-        }
+        }*/
 
     }
 

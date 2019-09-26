@@ -634,8 +634,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae9a704d416aaea4b81f2b9896d00a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  growSpeed: 0
+  growSpeed: 0.05
   blinkFrequency: 2
+  gameObjectToGrow: {fileID: 921491723}
 --- !u!1 &465485103
 GameObject:
   m_ObjectHideFlags: 0
@@ -1007,6 +1008,12 @@ MonoBehaviour:
   cableWidth: 0.05
   verletIterations: 1
   solverIterations: 1
+--- !u!1 &921491723 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5694502431245900493, guid: a33835ec6185536409911736ee093966,
+    type: 3}
+  m_PrefabInstance: {fileID: 8289609010545353610}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1734996732
 GameObject:
   m_ObjectHideFlags: 0

@@ -18,7 +18,7 @@ MonoBehaviour:
   SourceProjectPathUnformatted: pideySOund\PulleySpidey_AUDIO\PullSpi\PullSpi.fsprolleySpidey_AUDIO\PullSpi\PullSpi.fspro
   SourceBankPathUnformatted: FMOD_Assets\Desktop
   AutomaticEventLoading: 1
-  AutomaticSampleLoading: 0
+  AutomaticSampleLoading: 1
   ImportType: 0
   TargetAssetPath: 
   LoggingLevel: 2
