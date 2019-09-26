@@ -28,7 +28,6 @@ public class MoucheLogic : MonoBehaviour
     void Start()
     {
         timerOnFil = UTimer.Initialize(tempsSurLeFil, this, debutDebatFil);
-
     }
 
     // Update is called once per frame
@@ -57,6 +56,7 @@ public class MoucheLogic : MonoBehaviour
             {
 
             }
+            // tant que la mouche n'est pas accrochée au fil, elle se déplace dans la direction précisée
             else
             {
                 switch (direction)
@@ -77,12 +77,12 @@ public class MoucheLogic : MonoBehaviour
                     case DIRECTION.sinD:
                         transform.Translate(new Vector3(Time.deltaTime * vitesse, Mathf.Sin(timePassed * frequenceOndulation) * forceOndulation, 0));
                         break;
-
                 }
             }
 
             if(direction == DIRECTION.gauche || direction == DIRECTION.sinG)
             {
+                // on vérifie si la mouche arrive au niveau du fil, ou qu'elle n'ai pas déjà réussi à s'en libérer
                 if (transform.position.x < 0 && !filPasse && !accrocheAuFil)
                 {
                     seColleAuFil();
@@ -90,6 +90,7 @@ public class MoucheLogic : MonoBehaviour
             }
             else
             {
+                // on vérifie si la mouche arrive au niveau du fil, ou qu'elle n'ai pas déjà réussi à s'en libérer
                 if (transform.position.x > 0 && !filPasse && !accrocheAuFil)
                 {
                     seColleAuFil();
@@ -117,8 +118,6 @@ public class MoucheLogic : MonoBehaviour
         filPasse = true;
         GetComponentInChildren<Animator>().Play("mouche_vol");
     }
-
-
 
     private IEnumerator animDebatMouche()
     {

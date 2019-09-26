@@ -1457,12 +1457,13 @@ MonoBehaviour:
     type: 3}
   mouchePredicatPrefab: {fileID: 4444182561428024875, guid: 2080df5a7a344c74aa29c27144487eee,
     type: 3}
+  nbMouchesAMangerPourGagner: 10
   OffsetInitial: 0.2
   AjoutOffsetQuandMoucheManquee: 0.5
   AjoutOffsetQuandMoucheMangee: -0.5
   OffsetMin: 0.2
   OffsetMax: 4.5
-  gameIsStarted: 0
+  gameIsStarted: 1
 --- !u!114 &1746936455
 MonoBehaviour:
   m_ObjectHideFlags: 0

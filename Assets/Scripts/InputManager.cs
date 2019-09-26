@@ -20,7 +20,18 @@ public class InputManager : MonoBehaviour
     void Update()
     {
         float nextYPos = araigneeCorps.transform.position.y + Input.mouseScrollDelta.y * vitesseAraignee;
-        if (nextYPos < GameManager.instance.Range.y / 2 && nextYPos > -GameManager.instance.Range.y / 2)
+
+        // si la prochaine position amènerai l'araignée en dehors de l'écran, on la repositionne en bas
+        if(nextYPos < -GameManager.instance.Range.y / 2)
+        {
+            araigneeCorps.transform.position = new Vector3(araigneeCorps.transform.position.x, -GameManager.instance.Range.y / 2, araigneeCorps.transform.position.z);
+        }
+        // si la prochaine position amènerai l'araignée en dehors de l'écran, on la repositionne en haut
+        else if (nextYPos > GameManager.instance.Range.y / 2)
+        {
+            araigneeCorps.transform.position = new Vector3(araigneeCorps.transform.position.x, GameManager.instance.Range.y / 2, araigneeCorps.transform.position.z);
+        }
+        else
         {
             araigneeCorps.transform.Translate(new Vector3(0, Input.mouseScrollDelta.y * vitesseAraignee , 0));
         }
