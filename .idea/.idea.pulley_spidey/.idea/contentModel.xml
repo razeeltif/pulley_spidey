@@ -91,9 +91,21 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
-          <e p="CableComponent.cs" t="Include" />
-          <e p="CableParticle.cs" t="Include" />
+          <e p="AraigneeLogic.cs" t="Include" />
+          <e p="Cable" t="Include">
+            <e p="CableComponent.cs" t="Include" />
+            <e p="CableParticle.cs" t="Include" />
+          </e>
+          <e p="DeathWallsLogic.cs" t="Include" />
+          <e p="GameManager.cs" t="Include" />
+          <e p="InputManager.cs" t="Include" />
           <e p="InstantiateSpiderLimbs.cs" t="Include" />
+          <e p="LineRendererScript.cs" t="Include" />
+          <e p="MoucheLogic.cs" t="Include" />
+          <e p="Utils" t="Include">
+            <e p="Tags.cs" t="Include" />
+            <e p="UTimer.cs" t="Include" />
+          </e>
         </e>
       </e>
       <e p="Library" t="ExcludeRecursive" />

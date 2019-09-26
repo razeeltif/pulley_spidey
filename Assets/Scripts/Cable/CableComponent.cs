@@ -19,7 +19,7 @@ public class CableComponent : MonoBehaviour
     public int totalSegments = 50;
     [SerializeField] public float segmentsPerUnit = 2f;
     private int segments = 0;
-    [HideInInspector] public float cableWidth = 0.1f;
+    public float cableWidth = 0.1f;
 
     // Solver config
     [HideInInspector] public int verletIterations = 1;

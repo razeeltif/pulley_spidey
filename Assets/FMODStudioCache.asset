@@ -1,0 +1,336 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: 114896655607948366}
+  - {fileID: 114730274611991740}
+  - {fileID: 114325568861950584}
+  EditorEvents:
+  - {fileID: 114046627867713898}
+  - {fileID: 114078419495132762}
+  MasterBanks:
+  - {fileID: 114730274611991740}
+  StringsBanks:
+  - {fileID: 114896655607948366}
+  stringsBankWriteTime: 637049422941094030
+  cacheVersion: 3
+--- !u!114 &114002196303794088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: E:\Unity\Projets\PulleySpideyy\PullyeSpideySOund\PulleySpidey_AUDIO\PullSpi\Build\Desktop\Master
+    Bank.strings.bank
+  lastModified: 637049183069008758
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 760
+  Exists: 1
+--- !u!114 &114046627867713898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Test
+  guid: e1fade282e24d34a980649da6f0da9ca
+  Banks:
+  - {fileID: 114730274611991740}
+  - {fileID: 114325568861950584}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 74538
+--- !u!114 &114078419495132762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Test2
+  guid: 8bef9aa34cb4db45b225d83587ec9471
+  Banks:
+  - {fileID: 114730274611991740}
+  - {fileID: 114325568861950584}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1500
+--- !u!114 &114322193318609888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\abdoul-jabar.mayaki\Documents\MASTER 2\_PROJETS\PulleySpidey_AUDIO\PullSpi\Build\Desktop\Master
+    Bank.strings.bank
+  lastModified: 637048550737424975
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 760
+  Exists: 1
+--- !u!114 &114325568861950584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\Vic Ctx\Desktop\projetENJMIN\repoGit\pulley_spidey\FMOD_Assets\Desktop\main.bank
+  lastModified: 637049422941153874
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 1062624
+  Exists: 1
+--- !u!114 &114334260021432566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: E:\Unity\Projets\PulleySpideyy\PullyeSpideySOund\PulleySpidey_AUDIO\PullSpi\Build\Desktop\main.bank
+  lastModified: 637049183069158874
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 1007648
+  Exists: 1
+--- !u!114 &114437517825129246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\abdoul-jabar.mayaki\Documents\MASTER 2\_PROJETS\pulley_spidey\FMOD_Assets\Desktop\main.bank
+  lastModified: 637049350022992063
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 1062624
+  Exists: 0
+--- !u!114 &114501659030981842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Test
+  guid: e1fade282e24d34a980649da6f0da9ca
+  Banks:
+  - {fileID: 114334260021432566}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 74538
+--- !u!114 &114569081584300976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\abdoul-jabar.mayaki\Documents\MASTER 2\_PROJETS\pulley_spidey\FMOD_Assets\Desktop\Master
+    Bank.bank
+  lastModified: 637049350022563474
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 12474
+  Exists: 0
+--- !u!114 &114677093933051110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: E:\Unity\Projets\PulleySpideyy\PullyeSpideySOund\PulleySpidey_AUDIO\PullSpi\Build\Desktop\Master
+    Bank.bank
+  lastModified: 637049183069008758
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 12474
+  Exists: 1
+--- !u!114 &114730274611991740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\Vic Ctx\Desktop\projetENJMIN\repoGit\pulley_spidey\FMOD_Assets\Desktop\Master
+    Bank.bank
+  lastModified: 637049422941084063
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 1074624
+  Exists: 1
+--- !u!114 &114896655607948366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: FMOD_Assets\Desktop\Master Bank.strings.bank
+  lastModified: 637049422941094030
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 802
+  Exists: 1
+--- !u!114 &114938071167268064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Test
+  guid: e1fade282e24d34a980649da6f0da9ca
+  Banks:
+  - {fileID: 114962393973319492}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 74538
+--- !u!114 &114962393973319492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\abdoul-jabar.mayaki\Documents\MASTER 2\_PROJETS\PulleySpidey_AUDIO\PullSpi\Build\Desktop\main.bank
+  lastModified: 637048550738043333
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 1007648
+  Exists: 1
+--- !u!114 &114964804090988736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\abdoul-jabar.mayaki\Documents\MASTER 2\_PROJETS\PulleySpidey_AUDIO\PullSpi\Build\Desktop\Master
+    Bank.bank
+  lastModified: 637048550737365024
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 12474
+  Exists: 1
