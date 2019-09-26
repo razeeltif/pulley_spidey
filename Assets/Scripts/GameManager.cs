@@ -6,12 +6,6 @@ public class GameManager : MonoBehaviour
 {
     static public GameManager instance;
 
-    [SerializeField] private ArduinoSerialInfos _arduinoSerialInfos;
-    public ArduinoSerialInfos ArduinoSerialInfos {
-        get { return _arduinoSerialInfos; }
-        set { _arduinoSerialInfos = value; }
-    }
-
     public GameObject mouchePrefab;
     public GameObject mouchePredicatPrefab;
     // la mouche spwanera dans une fourchette de valeurs comprisent entre -screenWidth + OffsetInitial et screenWidth - offsetInitial
@@ -28,6 +22,12 @@ public class GameManager : MonoBehaviour
 
     public Vector3 Range => range;
     private Vector3 range;
+
+    [SerializeField] private bool gameIsStarted = false;
+    public bool GameIsStarted {
+        get { return gameIsStarted; }
+        set { gameIsStarted = value; }
+    }
 
     private void Awake()
     {
@@ -54,14 +54,20 @@ public class GameManager : MonoBehaviour
 
     public void moucheDestroyed()
     {
-        difficulteDynamique(AjoutOffsetQuandMoucheManquee);
-        Spawn();
+        Debug.Log("gameIsStarted : " + gameIsStarted);
+        if (gameIsStarted) {
+            difficulteDynamique(AjoutOffsetQuandMoucheManquee);
+            Spawn();
+        }
     }
 
     public void moucheMangee()
     {
-        difficulteDynamique(AjoutOffsetQuandMoucheMangee);
-        Spawn();
+        Debug.Log("gameIsStarted : " + gameIsStarted);
+        if (gameIsStarted) {
+            difficulteDynamique(AjoutOffsetQuandMoucheMangee);
+            Spawn();
+        }
     }
 
     public void Spawn()

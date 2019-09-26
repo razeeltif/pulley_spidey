@@ -101,6 +101,7 @@
           <e p="InputManager.cs" t="Include" />
           <e p="InstantiateSpiderLimbs.cs" t="Include" />
           <e p="LineRendererScript.cs" t="Include" />
+          <e p="LoopStory.cs" t="Include" />
           <e p="MoucheLogic.cs" t="Include" />
           <e p="Utils" t="Include">
             <e p="Tags.cs" t="Include" />

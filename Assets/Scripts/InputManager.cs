@@ -22,8 +22,7 @@ public class InputManager : MonoBehaviour
         float nextYPos = araigneeCorps.transform.position.y + Input.mouseScrollDelta.y * vitesseAraignee;
         if (nextYPos < GameManager.instance.Range.y / 2 && nextYPos > -GameManager.instance.Range.y / 2)
         {
-            araigneeCorps.transform.Translate(new Vector3(0, Input.mouseScrollDelta.y * vitesseAraignee 
-                             + GameManager.instance.ArduinoSerialInfos.SpeedRotation * coeffSpeedInfo , 0));
+            araigneeCorps.transform.Translate(new Vector3(0, Input.mouseScrollDelta.y * vitesseAraignee , 0));
         }
     }
 }
