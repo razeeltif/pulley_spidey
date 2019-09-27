@@ -6,6 +6,7 @@ TagManager:
   tags:
   - araignee
   - mouche
+  - audio
   layers:
   - Default
   - TransparentFX

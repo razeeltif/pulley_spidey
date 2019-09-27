@@ -18,7 +18,7 @@ public class InputManager : MonoBehaviour
     FMOD.Studio.EventInstance spiderReelAudio;
     public float timeToBeIdle = 1f;
 
-    UTimer timerIdle;
+    UTimer timerIdle; 
 
     bool isIdle = true;
 
@@ -67,17 +67,16 @@ public class InputManager : MonoBehaviour
             araigneeCorps.transform.Translate(new Vector3(0, Input.mouseScrollDelta.y * vitesseAraignee , 0));
         }
 
-        {
         if (nextYPos == araigneeCorps.transform.position.y && isMoving)
+        {
             isMoving = false;
             spiderReelAudio.setPaused(true);
-
         }
         else if (nextYPos != araigneeCorps.transform.position.y && !isMoving)
         {
             isMoving = true;
-        }
             spiderReelAudio.setPaused(false);
+        }
 
 
     }
