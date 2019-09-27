@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     public GameObject mouchePrefab;
     public GameObject mouchePredicatPrefab;
     public int nbMouchesAMangerPourGagner = 10;
-    private int nbMouchesMangees = 0;
+    public int nbMouchesMangees = 0;
     // la mouche spwanera dans une fourchette de valeurs comprisent entre -screenWidth + OffsetInitial et screenWidth - offsetInitial
     [Range(0 ,5)]
     public float OffsetInitial = 1;
@@ -30,6 +30,8 @@ public class GameManager : MonoBehaviour
         get { return gameIsStarted; }
         set { gameIsStarted = value; }
     }
+
+    public bool GameStopped = false;
 
     private void Awake()
     {
@@ -58,7 +60,7 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("gameIsStarted : " + gameIsStarted);
         // TODO sound
-        if (gameIsStarted) {
+        if (gameIsStarted && !GameStopped) {
             difficulteDynamique(AjoutOffsetQuandMoucheManquee);
             Spawn();
         }
@@ -68,10 +70,19 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("gameIsStarted : " + gameIsStarted);
         // TODO sound
-        if (gameIsStarted) {
+        if (gameIsStarted && !GameStopped) {
             nbMouchesMangees++;
             difficulteDynamique(AjoutOffsetQuandMoucheMangee);
-            Spawn();
+
+            if (GameManager.instance.nbMouchesMangees >= GameManager.instance.nbMouchesAMangerPourGagner)
+            {
+                GetComponent<LoopStory>().endGame();
+            }
+            else
+            {
+                Spawn();
+            }
+
         }
     }
 
