@@ -607,6 +607,7 @@ GameObject:
   m_Component:
   - component: {fileID: 298540938}
   - component: {fileID: 298540937}
+  - component: {fileID: 298540936}
   m_Layer: 0
   m_Name: titre
   m_TagString: Untagged
@@ -614,6 +615,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!95 &298540936
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 298540935}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2ca87ee29886e8e46b69f28bc80db7ae, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!212 &298540937
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1428,7 +1448,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1607356173
 Transform:
   m_ObjectHideFlags: 0
@@ -1437,7 +1457,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1607356172}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 0.53, y: 0.55, z: 1}
   m_Children: []
   m_Father: {fileID: 225568389}
@@ -1479,9 +1499,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 77bb2f6f550dd5149be700b5ae923b26, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1629,7 +1649,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   araigneeCorps: {fileID: 332925837}
-  vitesseAraignee: 0.1
+  vitesseAraignee: 0.03
   coeffSpeedInfo: 1
   spiderMoveAudioEvent: event:/Spider_Reel
 --- !u!114 &1746936454
@@ -1648,7 +1668,8 @@ MonoBehaviour:
     type: 3}
   mouchePredicatPrefab: {fileID: 4444182561428024875, guid: 2080df5a7a344c74aa29c27144487eee,
     type: 3}
-  nbMouchesAMangerPourGagner: 10
+  nbMouchesAMangerPourGagner: 4
+  nbMouchesMangees: 0
   OffsetInitial: 0.2
   AjoutOffsetQuandMoucheManquee: 0.5
   AjoutOffsetQuandMoucheMangee: -0.5
@@ -1669,7 +1690,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Title: {fileID: 298540935}
-  ecrantFin: {fileID: 0}
+  ecrantFin: {fileID: 1607356172}
+  vitesseFadeIn: 1
   spiderBody: {fileID: 332925837}
   fly1: {fileID: 1893950812}
   fly2: {fileID: 1685724241}

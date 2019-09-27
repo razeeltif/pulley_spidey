@@ -7,6 +7,7 @@ public class LoopStory : MonoBehaviour {
     public GameObject Title;
 
     public GameObject ecrantFin;
+    public float vitesseFadeIn = 1;
     
     public GameObject spiderBody;
     private Transform initTrAraigneeCorp;
@@ -44,10 +45,11 @@ public class LoopStory : MonoBehaviour {
             }
 
             fly2.SetActive(true);
-            Title.SetActive(false);
+            Title.GetComponent<Animator>().Play("titre_out");
+            //Title.SetActive(false);
         }
         //destroy test fly 2 => start game
-        if (fly2 == null && fly1 == null && GameManager.instance.GameIsStarted == false) {
+        if (fly2 == null && fly1 == null && GameManager.instance.GameIsStarted == false && GameManager.instance.GameStopped == false) {
             //todo : sound
             if (!fly2BeenEaten)
             {
@@ -56,10 +58,6 @@ public class LoopStory : MonoBehaviour {
             }
             GameManager.instance.GameIsStarted = true;
             GameManager.instance.moucheDestroyed();
-        }
-
-        if (GameManager.instance.nbMouchesAMangerPourGagner >= 10) {
-            ecrantFin.SetActive(true);
         }
         
         //Restart Condition
@@ -74,5 +72,31 @@ public class LoopStory : MonoBehaviour {
         //todo : restart scene
         SceneManager.LoadScene("SampleScene");
     }
+
+    public void endGame()
+    {
+        ecrantFin.SetActive(true);
+        GameManager.instance.GameStopped = true;
+        GameManager.instance.GameIsStarted = false;
+        StartCoroutine(fadeInEcranFin());
+    }
     
+
+    private IEnumerator fadeInEcranFin()
+    {
+        float alpha = 0;
+        while (alpha < 1)
+        {
+            alpha += Time.deltaTime * vitesseFadeIn;
+            ecrantFin.GetComponent<SpriteRenderer>().color = 
+                new Color(ecrantFin.GetComponent<SpriteRenderer>().color.r, 
+                          ecrantFin.GetComponent<SpriteRenderer>().color.g, 
+                          ecrantFin.GetComponent<SpriteRenderer>().color.b, 
+                          alpha);
+            yield return null;
+        }
+            
+
+    }
+
 }

@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     public GameObject mouchePrefab;
     public GameObject mouchePredicatPrefab;
     public int nbMouchesAMangerPourGagner = 10;
-    private int nbMouchesMangees = 0;
+    public int nbMouchesMangees = 0;
     // la mouche spwanera dans une fourchette de valeurs comprisent entre -screenWidth + OffsetInitial et screenWidth - offsetInitial
     [Range(0 ,5)]
     public float OffsetInitial = 1;
@@ -34,6 +34,8 @@ public class GameManager : MonoBehaviour
     [FMODUnity.EventRef]
     public string moucheVoleEvent;
     FMOD.Studio.EventInstance moucheVole;
+
+    public bool GameStopped = false;
 
     private void Awake()
     {
@@ -61,7 +63,8 @@ public class GameManager : MonoBehaviour
     public void moucheDestroyed()
     {
         Debug.Log("gameIsStarted : " + gameIsStarted);
-        if (gameIsStarted) {
+        // TODO sound
+        if (gameIsStarted && !GameStopped) {
             difficulteDynamique(AjoutOffsetQuandMoucheManquee);
             Spawn();
             moucheVole.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
@@ -71,11 +74,21 @@ public class GameManager : MonoBehaviour
     public void moucheMangee()
     {
         Debug.Log("gameIsStarted : " + gameIsStarted);
-        if (gameIsStarted) {
+        // TODO sound
+        if (gameIsStarted && !GameStopped) {
             FMODUnity.RuntimeManager.PlayOneShot("event:/Spider_Eat", transform.position);
             nbMouchesMangees++;
             difficulteDynamique(AjoutOffsetQuandMoucheMangee);
-            Spawn();
+
+            if (GameManager.instance.nbMouchesMangees >= GameManager.instance.nbMouchesAMangerPourGagner)
+            {
+                GetComponent<LoopStory>().endGame();
+            }
+            else
+            {
+                Spawn();
+            }
+
         }
     }
 
