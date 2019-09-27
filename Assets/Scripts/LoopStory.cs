@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LoopStory : MonoBehaviour {
     public GameObject Title;
@@ -22,7 +23,7 @@ public class LoopStory : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start() {
-        StartToPlay();
+//        StartToPlay();
     }
 
     // Update is called once per frame
@@ -44,18 +45,9 @@ public class LoopStory : MonoBehaviour {
     }
 
     void StartToPlay() {
-        Title.SetActive(true);
-        if (fly1 == null) {
-            fly1 = Instantiate(GameManager.instance.mouchePrefab);
-            fly1.transform.position = initTrfly1.position;
-        }
-        if (fly2 == null) {
-            fly2 = Instantiate(GameManager.instance.mouchePrefab);
-            fly2.transform.position = initTrfly2.position;
-            fly2.SetActive(false);
-        }
-        spiderBody.transform.Translate(new Vector3(0, initTrAraigneeCorp.position.y, 0));
-        
+
+        //todo : restart scene
+        SceneManager.LoadScene("SampleScene");
     }
     
 }

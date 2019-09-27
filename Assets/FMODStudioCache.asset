@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114896655607948366}
-  - {fileID: 114453844118632750}
-  - {fileID: 114737669239876826}
+  - {fileID: 114142335899255776}
+  - {fileID: 114321838545922304}
   EditorEvents:
   - {fileID: 114357889507526792}
   - {fileID: 114290887939680962}
@@ -24,10 +24,10 @@ MonoBehaviour:
   - {fileID: 114411768881989206}
   - {fileID: 114982970467185122}
   MasterBanks:
-  - {fileID: 114453844118632750}
+  - {fileID: 114142335899255776}
   StringsBanks:
   - {fileID: 114896655607948366}
-  stringsBankWriteTime: 637051813100460487
+  stringsBankWriteTime: 637051170900399483
   cacheVersion: 3
 --- !u!114 &114002196303794088
 MonoBehaviour:
@@ -102,7 +102,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Test
   guid: e1fade282e24d34a980649da6f0da9ca
-  Banks: []
+  Banks:
+  - {fileID: 114142335899255776}
+  - {fileID: 114321838545922304}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -124,7 +126,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Test2
   guid: 8bef9aa34cb4db45b225d83587ec9471
-  Banks: []
+  Banks:
+  - {fileID: 114142335899255776}
+  - {fileID: 114321838545922304}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -132,6 +136,25 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 1500
+--- !u!114 &114142335899255776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: E:\Unity\Projets\PulleySpideyy\PulleySpidey\FMOD_Assets\Desktop\Master Bank.bank
+  lastModified: 637050051173626245
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 1074624
+  Exists: 1
 --- !u!114 &114247424367350640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,7 +174,7 @@ MonoBehaviour:
   - Name: 
     Value: 1062624
   Exists: 0
---- !u!114 &114290887939680962
+--- !u!114 &114321838545922304
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -160,20 +183,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Path: event:/Fly_escape
-  guid: 0fb38b4b5f5e144ca3d42ab8f5b2dc96
-  Banks:
-  - {fileID: 114737669239876826}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 66
+  Path: E:\Unity\Projets\PulleySpideyy\PulleySpidey\FMOD_Assets\Desktop\main.bank
+  lastModified: 637051170900709692
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 2159712
+  Exists: 1
 --- !u!114 &114322193318609888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -247,7 +266,7 @@ MonoBehaviour:
   Path: event:/MainMusic
   guid: 8f40470b3a37f0479870d29fc740edfd
   Banks:
-  - {fileID: 114737669239876826}
+  - {fileID: 114321838545922304}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -594,7 +613,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: FMOD_Assets\Desktop\Master Bank.strings.bank
-  lastModified: 637051813100460487
+  lastModified: 637051170900399483
   LoadResult: 0
   FileSizes:
   - Name: 
