@@ -77,8 +77,39 @@ public class GameManager : MonoBehaviour
     {
         GameObject moucheInstance = GameObject.Instantiate(mouchePrefab);
 
-        moucheInstance.GetComponent<MoucheLogic>().direction = MoucheLogic.DIRECTION.gauche;
+        // direction de la mouche
+        int directionValue;
+        // tant que l'on a pas mangé plus de la moitié des mouches, on spawn que des patterns simples
+        if (nbMouchesMangees / nbMouchesAMangerPourGagner < 0.5f)
+        {
+            directionValue = Random.Range(0, 2);
+        }
+        else
+        {
+            directionValue = Random.Range(0, 4);
+        }
+        
+        MoucheLogic.DIRECTION dir = 0;
 
+        switch (directionValue)
+        {
+            case 0:
+                dir = MoucheLogic.DIRECTION.gauche;
+                break;
+            case 1:
+                dir = MoucheLogic.DIRECTION.droite;
+                break;
+            case 2:
+                dir = MoucheLogic.DIRECTION.sinG;
+                break;
+            case 3:
+                dir = MoucheLogic.DIRECTION.sinD;
+                break;
+        }
+        moucheInstance.GetComponent<MoucheLogic>().direction = dir;
+
+
+        // position initial de la mouche
         float yPos = Random.Range(-Range.y / 2 + OffsetInitial, Range.y / 2 - OffsetInitial);
 
         if(moucheInstance.GetComponent<MoucheLogic>().direction == MoucheLogic.DIRECTION.gauche || moucheInstance.GetComponent<MoucheLogic>().direction == MoucheLogic.DIRECTION.gauche)
@@ -105,13 +136,13 @@ public class GameManager : MonoBehaviour
 
         if (ML.direction == MoucheLogic.DIRECTION.droite || ML.direction == MoucheLogic.DIRECTION.sinD)
         {
-            //lrs.origin.position = new Vector3(GameManager.instance.Range.x / 2, mouche.transform.position.y, 0);
-            lrs.origin.position = new Vector3(0, mouche.transform.position.y, 0);
+            lrs.origin.position = new Vector3(GameManager.instance.Range.x / 2, mouche.transform.position.y, 0);
+            //lrs.origin.position = new Vector3(0, mouche.transform.position.y, 0);
         }
         else
         {
-            //lrs.origin.position = new Vector3(-GameManager.instance.Range.x / 2, mouche.transform.position.y, 0);
-            lrs.origin.position = new Vector3(0, mouche.transform.position.y, 0);
+            lrs.origin.position = new Vector3(-GameManager.instance.Range.x / 2, mouche.transform.position.y, 0);
+            //lrs.origin.position = new Vector3(0, mouche.transform.position.y, 0);
         }
     }
 
