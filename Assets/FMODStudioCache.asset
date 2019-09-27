@@ -14,17 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114896655607948366}
-  - {fileID: 114015285252239140}
-  - {fileID: 114980123556434196}
+  - {fileID: 114453844118632750}
+  - {fileID: 114737669239876826}
   EditorEvents:
-  - {fileID: 114046627867713898}
-  - {fileID: 114078419495132762}
   - {fileID: 114357889507526792}
+  - {fileID: 114290887939680962}
+  - {fileID: 114622799725211770}
+  - {fileID: 114843728573701560}
+  - {fileID: 114411768881989206}
+  - {fileID: 114982970467185122}
   MasterBanks:
-  - {fileID: 114015285252239140}
+  - {fileID: 114453844118632750}
   StringsBanks:
   - {fileID: 114896655607948366}
-  stringsBankWriteTime: 637051750927740542
+  stringsBankWriteTime: 637051813100460487
   cacheVersion: 3
 --- !u!114 &114002196303794088
 MonoBehaviour:
@@ -99,9 +102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Test
   guid: e1fade282e24d34a980649da6f0da9ca
-  Banks:
-  - {fileID: 114015285252239140}
-  - {fileID: 114980123556434196}
+  Banks: []
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -123,9 +124,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Test2
   guid: 8bef9aa34cb4db45b225d83587ec9471
-  Banks:
-  - {fileID: 114015285252239140}
-  - {fileID: 114980123556434196}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -152,6 +151,29 @@ MonoBehaviour:
   - Name: 
     Value: 1062624
   Exists: 0
+--- !u!114 &114290887939680962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Fly_escape
+  guid: 0fb38b4b5f5e144ca3d42ab8f5b2dc96
+  Banks:
+  - {fileID: 114737669239876826}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 66
 --- !u!114 &114322193318609888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -225,7 +247,7 @@ MonoBehaviour:
   Path: event:/MainMusic
   guid: 8f40470b3a37f0479870d29fc740edfd
   Banks:
-  - {fileID: 114980123556434196}
+  - {fileID: 114737669239876826}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -252,6 +274,29 @@ MonoBehaviour:
   - Name: 
     Value: 1074624
   Exists: 1
+--- !u!114 &114411768881989206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Fly_stick
+  guid: 3292857256ed9d468542b2a8f08d5e05
+  Banks:
+  - {fileID: 114737669239876826}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 7
 --- !u!114 &114437517825129246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -271,6 +316,26 @@ MonoBehaviour:
   - Name: 
     Value: 1062624
   Exists: 0
+--- !u!114 &114453844118632750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\abdoul-jabar.mayaki\Documents\MASTER 2\_PROJETS\pulley_spidey\FMOD_Assets\Desktop\Master
+    Bank.bank
+  lastModified: 637051813100400654
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 12474
+  Exists: 1
 --- !u!114 &114460049021331620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -392,6 +457,29 @@ MonoBehaviour:
   - Name: 
     Value: 1074624
   Exists: 0
+--- !u!114 &114622799725211770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Spider_Reel
+  guid: 18b25734ef48ba4c92e1151264056f71
+  Banks:
+  - {fileID: 114737669239876826}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1550
 --- !u!114 &114677093933051110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -432,6 +520,25 @@ MonoBehaviour:
   - Name: 
     Value: 1074624
   Exists: 1
+--- !u!114 &114737669239876826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\abdoul-jabar.mayaki\Documents\MASTER 2\_PROJETS\pulley_spidey\FMOD_Assets\Desktop\main.bank
+  lastModified: 637051813101779522
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 1173504
+  Exists: 1
 --- !u!114 &114738234413707680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -451,6 +558,29 @@ MonoBehaviour:
   - Name: 
     Value: 2159712
   Exists: 1
+--- !u!114 &114843728573701560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Spider_Eat
+  guid: 2cfd76882ee8904ab6010d8c8381050c
+  Banks:
+  - {fileID: 114737669239876826}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1133
 --- !u!114 &114896655607948366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -464,11 +594,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: FMOD_Assets\Desktop\Master Bank.strings.bank
-  lastModified: 637051750927740542
+  lastModified: 637051813100460487
   LoadResult: 0
   FileSizes:
   - Name: 
-    Value: 854
+    Value: 990
   Exists: 1
 --- !u!114 &114938071167268064
 MonoBehaviour:
@@ -574,6 +704,29 @@ MonoBehaviour:
   - Name: 
     Value: 2159712
   Exists: 1
+--- !u!114 &114982970467185122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Fly_hover
+  guid: fafe8a19fce0434faa5b0d3d401b8f4f
+  Banks:
+  - {fileID: 114737669239876826}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 300
 --- !u!114 &114986304903696516
 MonoBehaviour:
   m_ObjectHideFlags: 0
