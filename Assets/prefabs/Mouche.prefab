@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 8183598718556186658}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.95, y: -2.49, z: -0.1}
-  m_LocalScale: {x: 0.37257, y: 0.37257, z: 0.37257}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_Children:
   - {fileID: 216806526}
   m_Father: {fileID: 0}
@@ -61,14 +61,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b6fe5d2d06bcf940b9d59d6b07ee7ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vitesseDeVol: 4
+  vitesseDeVol: 1
   vitesseDeVolApresLeFil: 4
   frequenceOndulation: 10
   forceOndulation: 0.05
   direction: 3
-  tempsSurLeFil: 0.1
-  tempsDebattageMoucheSurFil: 0.1
-  amplitudeAnimDebat: 0.01
+  tempsSurLeFil: 6
+  tempsDebattageMoucheSurFil: 2
+  amplitudeAnimDebat: 0.08
+  movingFly: 1
 --- !u!1001 &8174553336478679730
 PrefabInstance:
   m_ObjectHideFlags: 0

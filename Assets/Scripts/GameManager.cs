@@ -57,6 +57,7 @@ public class GameManager : MonoBehaviour
     public void moucheDestroyed()
     {
         Debug.Log("gameIsStarted : " + gameIsStarted);
+        // TODO sound
         if (gameIsStarted) {
             difficulteDynamique(AjoutOffsetQuandMoucheManquee);
             Spawn();
@@ -66,6 +67,7 @@ public class GameManager : MonoBehaviour
     public void moucheMangee()
     {
         Debug.Log("gameIsStarted : " + gameIsStarted);
+        // TODO sound
         if (gameIsStarted) {
             nbMouchesMangees++;
             difficulteDynamique(AjoutOffsetQuandMoucheMangee);
@@ -112,7 +114,7 @@ public class GameManager : MonoBehaviour
         // position initial de la mouche
         float yPos = Random.Range(-Range.y / 2 + OffsetInitial, Range.y / 2 - OffsetInitial);
 
-        if(moucheInstance.GetComponent<MoucheLogic>().direction == MoucheLogic.DIRECTION.gauche || moucheInstance.GetComponent<MoucheLogic>().direction == MoucheLogic.DIRECTION.gauche)
+        if(moucheInstance.GetComponent<MoucheLogic>().direction == MoucheLogic.DIRECTION.gauche || moucheInstance.GetComponent<MoucheLogic>().direction == MoucheLogic.DIRECTION.sinG)
         {
             moucheInstance.transform.position = new Vector3(Range.x / 2, yPos, -0.1f);
         }
