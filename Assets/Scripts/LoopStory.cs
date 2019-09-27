@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LoopStory : MonoBehaviour {
     public GameObject Title;
@@ -44,9 +45,9 @@ public class LoopStory : MonoBehaviour {
     }
 
     void StartToPlay() {
-        
+
         //todo : restart scene
-        
+        SceneManager.LoadScene("SampleScene");
     }
     
 }
