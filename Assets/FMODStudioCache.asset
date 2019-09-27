@@ -14,17 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114896655607948366}
-  - {fileID: 114385133717408152}
-  - {fileID: 114738234413707680}
+  - {fileID: 114015285252239140}
+  - {fileID: 114980123556434196}
   EditorEvents:
   - {fileID: 114046627867713898}
   - {fileID: 114078419495132762}
   - {fileID: 114357889507526792}
   MasterBanks:
-  - {fileID: 114385133717408152}
+  - {fileID: 114015285252239140}
   StringsBanks:
   - {fileID: 114896655607948366}
-  stringsBankWriteTime: 637051170900399483
+  stringsBankWriteTime: 637051750927740542
   cacheVersion: 3
 --- !u!114 &114002196303794088
 MonoBehaviour:
@@ -45,6 +45,26 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 760
+  Exists: 1
+--- !u!114 &114015285252239140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\Vic Ctx\Desktop\projetENJMIN\repoGit\pulley_spidey\FMOD_Assets\Desktop\Master
+    Bank.bank
+  lastModified: 637051750927740542
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 1074624
   Exists: 1
 --- !u!114 &114037968708566240
 MonoBehaviour:
@@ -80,8 +100,8 @@ MonoBehaviour:
   Path: event:/Test
   guid: e1fade282e24d34a980649da6f0da9ca
   Banks:
-  - {fileID: 114385133717408152}
-  - {fileID: 114738234413707680}
+  - {fileID: 114015285252239140}
+  - {fileID: 114980123556434196}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -104,8 +124,8 @@ MonoBehaviour:
   Path: event:/Test2
   guid: 8bef9aa34cb4db45b225d83587ec9471
   Banks:
-  - {fileID: 114385133717408152}
-  - {fileID: 114738234413707680}
+  - {fileID: 114015285252239140}
+  - {fileID: 114980123556434196}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -205,7 +225,7 @@ MonoBehaviour:
   Path: event:/MainMusic
   guid: 8f40470b3a37f0479870d29fc740edfd
   Banks:
-  - {fileID: 114738234413707680}
+  - {fileID: 114980123556434196}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -444,7 +464,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: FMOD_Assets\Desktop\Master Bank.strings.bank
-  lastModified: 637051170900399483
+  lastModified: 637051750927740542
   LoadResult: 0
   FileSizes:
   - Name: 
@@ -534,6 +554,25 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 12474
+  Exists: 1
+--- !u!114 &114980123556434196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\Vic Ctx\Desktop\projetENJMIN\repoGit\pulley_spidey\FMOD_Assets\Desktop\main.bank
+  lastModified: 637051750927897041
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 2159712
   Exists: 1
 --- !u!114 &114986304903696516
 MonoBehaviour:
