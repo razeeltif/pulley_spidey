@@ -97,6 +97,7 @@
             <e p="CableParticle.cs" t="Include" />
           </e>
           <e p="DeathWallsLogic.cs" t="Include" />
+          <e p="DontDestroy.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
           <e p="InputManager.cs" t="Include" />
           <e p="InstantiateSpiderLimbs.cs" t="Include" />

@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class LoopStory : MonoBehaviour {
     public GameObject Title;
+
+    public GameObject ecrantFin;
     
     public GameObject spiderBody;
     private Transform initTrAraigneeCorp;
@@ -30,13 +32,21 @@ public class LoopStory : MonoBehaviour {
     void Update() {
         //destroy test fly 1 => go destroy fly2
         if (fly1 == null && fly2 != null){
+            //todo : sound
             fly2.SetActive(true);
+            Title.SetActive(false);
         }
         //destroy test fly 2 => start game
         if (fly2 == null && fly1 == null && GameManager.instance.GameIsStarted == false) {
+            //todo : sound
             GameManager.instance.GameIsStarted = true;
             GameManager.instance.moucheDestroyed();
         }
+
+        if (GameManager.instance.nbMouchesAMangerPourGagner >= 10) {
+            ecrantFin.SetActive(true);
+        }
+        
         //Restart Condition
         if (Input.GetButtonDown("Restart")) {
             StartToPlay();

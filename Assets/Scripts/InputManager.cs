@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -35,5 +36,12 @@ public class InputManager : MonoBehaviour
         {
             araigneeCorps.transform.Translate(new Vector3(0, Input.mouseScrollDelta.y * vitesseAraignee , 0));
         }
+
+        if (nextYPos == araigneeCorps.transform.position.y) {
+            //todo : sound
+        }
+        
     }
+    
+    
 }
