@@ -17,6 +17,8 @@ public class LoopStory : MonoBehaviour {
     public GameObject fly2;
     private Transform initTrfly2;
 
+    bool fly1BeenEaten, fly2BeenEaten;
+
     private void Awake() {
         initTrfly1 = fly1.transform;
         initTrfly2 = fly2.transform;
@@ -25,7 +27,9 @@ public class LoopStory : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start() {
-//        StartToPlay();
+        //        StartToPlay();
+        fly1BeenEaten = false;
+        fly2BeenEaten = false;
     }
 
     // Update is called once per frame
@@ -33,12 +37,23 @@ public class LoopStory : MonoBehaviour {
         //destroy test fly 1 => go destroy fly2
         if (fly1 == null && fly2 != null){
             //todo : sound
+            if (!fly1BeenEaten)
+            {
+                fly1BeenEaten = true;
+                FMODUnity.RuntimeManager.PlayOneShot("event:/Spider_Eat", transform.position);
+            }
+
             fly2.SetActive(true);
             Title.SetActive(false);
         }
         //destroy test fly 2 => start game
         if (fly2 == null && fly1 == null && GameManager.instance.GameIsStarted == false) {
             //todo : sound
+            if (!fly2BeenEaten)
+            {
+                fly2BeenEaten = true;
+                FMODUnity.RuntimeManager.PlayOneShot("event:/Spider_Eat", transform.position);
+            }
             GameManager.instance.GameIsStarted = true;
             GameManager.instance.moucheDestroyed();
         }

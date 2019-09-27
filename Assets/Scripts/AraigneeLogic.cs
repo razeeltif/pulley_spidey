@@ -50,6 +50,7 @@ public class AraigneeLogic : MonoBehaviour
 
     public void manger(GameObject mouche)
     {
+        mouche.GetComponent<MoucheLogic>().arreteMoiCeSonPutain();
         Destroy(mouche);
         GameManager.instance.moucheMangee();
         grow();

@@ -70,6 +70,7 @@ MonoBehaviour:
   tempsDebattageMoucheSurFil: 2
   amplitudeAnimDebat: 0.08
   movingFly: 1
+  moucheVoleEvent: event:/Fly_hover
 --- !u!1001 &8174553336478679730
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -77,11 +78,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8183598718556186686}
     m_Modifications:
-    - target: {fileID: 8174553336417613517, guid: 896287bcbac820e4abc9838b18291c36,
-        type: 3}
-      propertyPath: m_Name
-      value: mouche_prefab
-      objectReference: {fileID: 0}
     - target: {fileID: 8174553336417613516, guid: 896287bcbac820e4abc9838b18291c36,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -136,6 +132,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8174553336417613517, guid: 896287bcbac820e4abc9838b18291c36,
+        type: 3}
+      propertyPath: m_Name
+      value: mouche_prefab
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 896287bcbac820e4abc9838b18291c36, type: 3}

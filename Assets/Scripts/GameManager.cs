@@ -31,6 +31,10 @@ public class GameManager : MonoBehaviour
         set { gameIsStarted = value; }
     }
 
+    [FMODUnity.EventRef]
+    public string moucheVoleEvent;
+    FMOD.Studio.EventInstance moucheVole;
+
     private void Awake()
     {
         if(instance == null)
@@ -57,18 +61,18 @@ public class GameManager : MonoBehaviour
     public void moucheDestroyed()
     {
         Debug.Log("gameIsStarted : " + gameIsStarted);
-        // TODO sound
         if (gameIsStarted) {
             difficulteDynamique(AjoutOffsetQuandMoucheManquee);
             Spawn();
+            moucheVole.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         }
     }
 
     public void moucheMangee()
     {
         Debug.Log("gameIsStarted : " + gameIsStarted);
-        // TODO sound
         if (gameIsStarted) {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Spider_Eat", transform.position);
             nbMouchesMangees++;
             difficulteDynamique(AjoutOffsetQuandMoucheMangee);
             Spawn();
@@ -78,6 +82,8 @@ public class GameManager : MonoBehaviour
     public void Spawn()
     {
         GameObject moucheInstance = GameObject.Instantiate(mouchePrefab);
+        moucheVole = FMODUnity.RuntimeManager.CreateInstance(moucheVoleEvent); 
+        moucheVole.start();
 
         // direction de la mouche
         int directionValue;

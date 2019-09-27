@@ -19,15 +19,22 @@ public class MoucheLogic : MonoBehaviour
     private float timePassed = 0;
     private bool filPasse = false;
     private bool accrocheAuFil = false;
+    bool isStuck;
 
     private UTimer timerOnFil;
 
     public bool movingFly = true;
 
+    [FMODUnity.EventRef]
+    public string moucheVoleEvent;
+    public FMOD.Studio.EventInstance moucheVole;
+
     // Start is called before the first frame update
     void Start()
     {
         timerOnFil = UTimer.Initialize(tempsSurLeFil, this, debutDebatFil);
+        moucheVole = FMODUnity.RuntimeManager.CreateInstance(moucheVoleEvent);
+        moucheVole.start();
     }
 
     // Update is called once per frame
@@ -104,6 +111,14 @@ public class MoucheLogic : MonoBehaviour
         accrocheAuFil = true;
         timerOnFil.start(tempsSurLeFil);
         GetComponentInChildren<Animator>().Play("mouche_idle");
+
+        if (!isStuck)
+        {
+            isStuck = true;
+            moucheVole.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Fly_stick", transform.position);
+        }
+
     }
 
     private void debutDebatFil()
@@ -117,6 +132,13 @@ public class MoucheLogic : MonoBehaviour
         accrocheAuFil = false;
         filPasse = true;
         GetComponentInChildren<Animator>().Play("mouche_vol");
+
+        if (isStuck)
+        {
+            isStuck = false;
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Fly_escape",transform.position);
+            moucheVole.start();
+        }
     }
 
     private IEnumerator animDebatMouche()
@@ -140,6 +162,16 @@ public class MoucheLogic : MonoBehaviour
 
         this.transform.position = initialPosition;
         decrochageDuFil();
+    }
+
+    public void arreteMoiCeSonPutain()
+    {
+        moucheVole.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+    }
+
+    private void OnDestroy()
+    {
+        Debug.Log("mouche kill");
     }
 
 }

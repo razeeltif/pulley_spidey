@@ -11,10 +11,19 @@ public class InputManager : MonoBehaviour
 
     public float coeffSpeedInfo = 1f;
 
+    bool isMoving;
+
+    [FMODUnity.EventRef]
+    public string spiderMoveAudioEvent;
+    FMOD.Studio.EventInstance spiderReelAudio;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        spiderReelAudio = FMODUnity.RuntimeManager.CreateInstance(spiderMoveAudioEvent);
+        isMoving = false;
+        spiderReelAudio.start();
+        spiderReelAudio.setPaused(true);
     }
 
     // Update is called once per frame
@@ -37,10 +46,19 @@ public class InputManager : MonoBehaviour
             araigneeCorps.transform.Translate(new Vector3(0, Input.mouseScrollDelta.y * vitesseAraignee , 0));
         }
 
-        if (nextYPos == araigneeCorps.transform.position.y) {
-            //todo : sound
+        if (nextYPos == araigneeCorps.transform.position.y && isMoving)
+        {
+            isMoving = false;
+            spiderReelAudio.setPaused(true);
         }
-        
+
+        else if (nextYPos != araigneeCorps.transform.position.y && !isMoving)
+        {
+            isMoving = true;
+            spiderReelAudio.setPaused(false);
+        }
+
+
     }
     
     
