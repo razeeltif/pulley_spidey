@@ -36,6 +36,16 @@ public class InputManager : MonoBehaviour
     void Update()
     {
 
+        if (GameManager.instance.GameStopped)
+        {
+            return;
+        }
+
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            // l'argument "end" appel une fonction spéciale qui termine le jeu
+            Transition.instance.BeginTransition("end");
+        }
 
         float nextYPos = araigneeCorps.transform.position.y + Input.mouseScrollDelta.y * vitesseAraignee;
 
