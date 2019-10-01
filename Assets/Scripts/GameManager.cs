@@ -56,6 +56,11 @@ public class GameManager : MonoBehaviour
         Vector3 EndPoint = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0));
         range = EndPoint - StartPoint;
         Debug.Log(range);
+
+        moucheVole = FMODUnity.RuntimeManager.CreateInstance(moucheVoleEvent);
+        moucheVole.start();
+        moucheVole.setPaused(true);
+
     }
 
     // Update is called once per frame
@@ -71,7 +76,6 @@ public class GameManager : MonoBehaviour
         if (gameIsStarted && !GameStopped) {
             difficulteDynamique(AjoutOffsetQuandMoucheManquee);
             Spawn();
-            moucheVole.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         }
     }
 
@@ -96,11 +100,15 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void MoucheTG()
+    {
+        moucheVole.setPaused(true);
+    }
+
     public void Spawn()
     {
         GameObject moucheInstance = GameObject.Instantiate(mouchePrefab);
-        moucheVole = FMODUnity.RuntimeManager.CreateInstance(moucheVoleEvent); 
-        moucheVole.start();
+        moucheVole.setPaused(false);
 
         // direction de la mouche
         int directionValue;

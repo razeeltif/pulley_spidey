@@ -25,16 +25,14 @@ public class MoucheLogic : MonoBehaviour
 
     public bool movingFly = true;
 
-    [FMODUnity.EventRef]
-    public string moucheVoleEvent;
-    public FMOD.Studio.EventInstance moucheVole;
+    
 
     // Start is called before the first frame update
     void Start()
     {
         timerOnFil = UTimer.Initialize(tempsSurLeFil, this, debutDebatFil);
-        moucheVole = FMODUnity.RuntimeManager.CreateInstance(moucheVoleEvent);
-        moucheVole.start();
+        //moucheVole = FMODUnity.RuntimeManager.CreateInstance(moucheVoleEvent);
+        //moucheVole.start();
     }
 
     // Update is called once per frame
@@ -115,8 +113,9 @@ public class MoucheLogic : MonoBehaviour
         if (!isStuck)
         {
             isStuck = true;
-            moucheVole.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+            GameManager.instance.GetComponent<GameManager>().MoucheTG();
             FMODUnity.RuntimeManager.PlayOneShot("event:/Fly_stick", transform.position);
+            //moucheVole.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         }
 
     }
@@ -135,9 +134,9 @@ public class MoucheLogic : MonoBehaviour
 
         if (isStuck)
         {
-            isStuck = false;
+            isStuck = false;  
             FMODUnity.RuntimeManager.PlayOneShot("event:/Fly_escape",transform.position);
-            moucheVole.start();
+            //moucheVole.start();
         }
     }
 
@@ -166,7 +165,8 @@ public class MoucheLogic : MonoBehaviour
 
     public void arreteMoiCeSonPutain()
     {
-        moucheVole.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        GameManager.instance.GetComponent<GameManager>().MoucheTG();
+        //moucheVole.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
     }
 
     private void OnDestroy()
