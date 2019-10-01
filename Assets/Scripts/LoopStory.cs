@@ -62,7 +62,8 @@ public class LoopStory : MonoBehaviour {
         
         //Restart Condition
         if (Input.GetButtonDown("Restart")) {
-            StartToPlay();
+            Transition.instance.BeginTransition("SampleScene");
+            //StartToPlay();
         }
         
     }
