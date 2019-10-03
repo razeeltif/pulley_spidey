@@ -50,6 +50,7 @@ public class Transition : MonoBehaviour
     public void BeginTransition(string sceneName) {
         inTransition = true;
         nameSceneToLoad = sceneName;
+        GameManager.instance.MoucheTG();
         GetComponent<Animator>().Play("transitionIn");
     }
 
