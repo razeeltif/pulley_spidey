@@ -1526,6 +1526,8 @@ MonoBehaviour:
   scaleMax: 11
   inTransition: 0
   nameSceneToLoad: 
+  width: 0
+  height: 0
 --- !u!1 &921491723 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5694502431245900493, guid: a33835ec6185536409911736ee093966,

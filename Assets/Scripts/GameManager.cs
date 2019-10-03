@@ -22,8 +22,7 @@ public class GameManager : MonoBehaviour
     public float OffsetMin = 0.2f;
     [Range(0, 5)]
     public float OffsetMax = 4.5f;
-
-    public Vector3 Range => range;
+    
     private Vector3 range;
 
     [SerializeField] private bool gameIsStarted = false;
@@ -52,10 +51,7 @@ public class GameManager : MonoBehaviour
        // SceneManager.L("sound");
 
 
-        Vector3 StartPoint = Camera.main.ScreenToWorldPoint(Vector3.zero);
-        Vector3 EndPoint = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0));
-        range = EndPoint - StartPoint;
-        Debug.Log(range);
+
 
         moucheVole = FMODUnity.RuntimeManager.CreateInstance(moucheVoleEvent);
         moucheVole.start();
@@ -143,15 +139,15 @@ public class GameManager : MonoBehaviour
 
 
         // position initial de la mouche
-        float yPos = Random.Range(-Range.y / 2 + OffsetInitial, Range.y / 2 - OffsetInitial);
+        float yPos = Random.Range(-range.y / 2 + OffsetInitial, range.y / 2 - OffsetInitial);
 
         if(moucheInstance.GetComponent<MoucheLogic>().direction == MoucheLogic.DIRECTION.gauche || moucheInstance.GetComponent<MoucheLogic>().direction == MoucheLogic.DIRECTION.sinG)
         {
-            moucheInstance.transform.position = new Vector3(Range.x / 2, yPos, -0.1f);
+            moucheInstance.transform.position = new Vector3(range.x / 2, yPos, -0.1f);
         }
         else
         {
-            moucheInstance.transform.position = new Vector3(-Range.x / 2, yPos, -0.1f);
+            moucheInstance.transform.position = new Vector3(-range.x / 2, yPos, -0.1f);
         }
 
         initializePredicatMouche(moucheInstance);
@@ -169,12 +165,12 @@ public class GameManager : MonoBehaviour
 
         if (ML.direction == MoucheLogic.DIRECTION.droite || ML.direction == MoucheLogic.DIRECTION.sinD)
         {
-            lrs.origin.position = new Vector3(GameManager.instance.Range.x / 2, mouche.transform.position.y, 0);
+            lrs.origin.position = new Vector3(GameManager.instance.range.x / 2, mouche.transform.position.y, 0);
             //lrs.origin.position = new Vector3(0, mouche.transform.position.y, 0);
         }
         else
         {
-            lrs.origin.position = new Vector3(-GameManager.instance.Range.x / 2, mouche.transform.position.y, 0);
+            lrs.origin.position = new Vector3(-GameManager.instance.range.x / 2, mouche.transform.position.y, 0);
             //lrs.origin.position = new Vector3(0, mouche.transform.position.y, 0);
         }
     }
@@ -205,5 +201,19 @@ public class GameManager : MonoBehaviour
         }
 
     }
+
+    private void calculRange()
+    {
+        Vector3 StartPoint = Camera.main.ScreenToWorldPoint(Vector3.zero);
+        Vector3 EndPoint = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0));
+        range = EndPoint - StartPoint;
+        Debug.Log(range);
+    }
+
+    public Vector3 getRange()
+    {
+        calculRange();
+        return range;
+    } 
 
 }

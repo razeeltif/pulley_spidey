@@ -63,14 +63,14 @@ public class InputManager : MonoBehaviour
         }
 
         // si la prochaine position amènerai l'araignée en dehors de l'écran, on la repositionne en bas
-        if (nextYPos < -GameManager.instance.Range.y / 2)
+        if (nextYPos < -GameManager.instance.getRange().y / 2)
         {
-            araigneeCorps.transform.position = new Vector3(araigneeCorps.transform.position.x, -GameManager.instance.Range.y / 2, araigneeCorps.transform.position.z);
+            araigneeCorps.transform.position = new Vector3(araigneeCorps.transform.position.x, -GameManager.instance.getRange().y / 2, araigneeCorps.transform.position.z);
         }
         // si la prochaine position amènerai l'araignée en dehors de l'écran, on la repositionne en haut
-        else if (nextYPos > GameManager.instance.Range.y / 2)
+        else if (nextYPos > GameManager.instance.getRange().y / 2)
         {
-            araigneeCorps.transform.position = new Vector3(araigneeCorps.transform.position.x, GameManager.instance.Range.y / 2, araigneeCorps.transform.position.z);
+            araigneeCorps.transform.position = new Vector3(araigneeCorps.transform.position.x, GameManager.instance.getRange().y / 2, araigneeCorps.transform.position.z);
         }
         else
         {

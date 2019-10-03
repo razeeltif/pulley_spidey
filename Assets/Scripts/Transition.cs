@@ -15,24 +15,35 @@ public class Transition : MonoBehaviour
     public bool inTransition = false;
     public string nameSceneToLoad;
 
+    public float width;
+    public float height;
+
     private void Awake()
     {
         if(instance == null)
         {
             instance = this;
+            DontDestroyOnLoad(gameObject);
         }
-        DontDestroyOnLoad(this.gameObject);
+        else
+        {
+            Destroy(this.gameObject);
+        }
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
+        width = Screen.width;
+        height = Screen.height;
+
+        // ratio 1.7
+        float ratio = width / height;
+
+        width = height / ratio;
+
+        Screen.SetResolution(Mathf.RoundToInt(width), Mathf.RoundToInt(height), false);
 
     }
 
@@ -48,8 +59,11 @@ public class Transition : MonoBehaviour
         {
             Application.Quit();
         }
-        SceneManager.LoadScene(nameSceneToLoad);
-        GetComponent<Animator>().Play("transitionOut");
-        inTransition = false;
+        else
+        {
+            SceneManager.LoadScene(nameSceneToLoad);
+            GetComponent<Animator>().Play("transitionOut");
+            inTransition = false;
+        }
     }
 }
