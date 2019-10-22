@@ -38,12 +38,15 @@ public class Transition : MonoBehaviour
         width = Screen.width;
         height = Screen.height;
 
-        // ratio 1.7
-        float ratio = width / height;
+        if(width > height)
+        {
+            // ratio 1.7
+            float ratio = width / height;
 
-        width = height / ratio;
+            width = height / ratio;
 
-        Screen.SetResolution(Mathf.RoundToInt(width), Mathf.RoundToInt(height), false);
+            Screen.SetResolution(Mathf.RoundToInt(width), Mathf.RoundToInt(height), false);
+        }
 
     }
 
